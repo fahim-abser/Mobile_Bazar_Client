@@ -13,7 +13,6 @@ const Navbar = () => {
 
     const menuItems = <> <li className='font-semibold'>
         <Link to='/'>Home</Link>
-        <Link to='/allservices'>Services</Link>
         <Link to='/blog'>Blog</Link>
     </li>
         {
@@ -36,7 +35,7 @@ const Navbar = () => {
                 <div className="dropdown">
                     <Link to='/' className="btn btn-ghost normal-case text-xl">
                         <img  alt="" />
-                        <h3>LUCKY Lens</h3>
+                        <h3>MOBILE BAZAR</h3>
                     </Link>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {menuItems}
