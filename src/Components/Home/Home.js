@@ -1,5 +1,4 @@
 import React from 'react';
-import AddProduct from '../AddProduct/AddProduct';
 import CategoryDetails from '../CategoryDetails/CategoryDetails';
 import AdvertisedItem from './AdvertisedItem';
 import Banner from './Banner';
@@ -15,7 +14,6 @@ const Home = () => {
             <CatagoryName></CatagoryName>
             <ExtraSection></ExtraSection>
             <CategoryDetails></CategoryDetails>
-            <AddProduct></AddProduct>
         </div>
     );
 };

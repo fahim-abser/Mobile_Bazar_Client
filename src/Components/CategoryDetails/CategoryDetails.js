@@ -1,19 +1,38 @@
-import React from 'react';
+import { async, getDefaultAppConfig } from '@firebase/util';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import BrandCategor from '../BrandCategor/BrandCategor';
+import axios from 'axios';
 
 const CategoryDetails = () => {
+    const { id } = useParams();
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        getData()
+    }, [])
+
+    const getData = async () => {
+        await axios.get("https://server-liart-five.vercel.app/allcategory")
+            .then(res => setCategories(res.data)).catch(error => { })
+    }
+
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl p-20">
-            <figure><img src="https://placeimg.com/400/400/arch" alt="Album" /></figure>
-            <div className="card-body">
-                <h2 className="card-title text-4xl text-orange-600">Name</h2>
-                <h5>Used</h5>
-                <h5>Condition:</h5>
-                <p>Price:</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div>
+        <div>{categories[0] != undefined ? (
+            <div>
+                {categories.map((element) => {
+                    let brand_name = element.brand;
+                    if (brand_name === id) {
+                        let BrandElem = element;
+                        return <BrandCategor category={BrandElem} />;
+                    }
+                })}
             </div>
-        </div>
+        ) : (
+            <div></div>
+        )}
+
+
+        </div >
     );
 };
 

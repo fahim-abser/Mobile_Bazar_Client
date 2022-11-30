@@ -14,12 +14,14 @@ const Navbar = () => {
     const menuItems = <> <li className='font-semibold text-orange-600'>
         <Link to='/'>Home</Link>
         <Link to='/blog'>Blog</Link>
+        <Link to ='/addProduct'>Add Product</Link>
+        
     </li>
         {
             user?.email ?
                 <>
                     <li className='font-semibold'><Link to='/addservice'>Add Service</Link></li>
-                    <li className='font-semibold'><Link to='/myreview'>My Review</Link></li>
+                    <li className='font-semibold'><Link to='/myProduct'>My Product</Link></li>
                     <li className='font-semibold'>
                         <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
                     </li>
