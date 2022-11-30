@@ -11,7 +11,7 @@ const Navbar = () => {
             .catch();
     }
 
-    const menuItems = <> <li className='font-semibold'>
+    const menuItems = <> <li className='font-semibold text-orange-600'>
         <Link to='/'>Home</Link>
         <Link to='/blog'>Blog</Link>
     </li>
@@ -25,7 +25,7 @@ const Navbar = () => {
                     </li>
                 </>
                 :
-                <li className='font-semibold'><Link to='/login'>Login</Link></li>
+                <li className='font-semibold text-orange-600'><Link to='/login'>Login</Link></li>
         }
     </>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className="dropdown">
                     <Link to='/' className="btn btn-ghost normal-case text-xl">
                         <img  alt="" />
-                        <h3>MOBILE BAZAR</h3>
+                        <h3 className='text-orange-600'>MOBILE BAZAR</h3>
                     </Link>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {menuItems}
