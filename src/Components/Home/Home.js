@@ -1,19 +1,15 @@
 import React from 'react';
-import CategoryDetails from '../CategoryDetails/CategoryDetails';
-import AdvertisedItem from './AdvertisedItem';
-import Banner from './Banner';
-import CatagoryName from './CategorieName';
-import ExtraSection from './ExtraSection';
+import Catagories from './Catagories/Catagories';
+import AnotherHome from './slider/AnotherHome/AnotherHome';
+import Slider from './slider/Slider';
 
 const Home = () => {
     return (
-        <div>
-            
-            <Banner></Banner>
-            <AdvertisedItem></AdvertisedItem>
-            <CatagoryName></CatagoryName>
-            <ExtraSection></ExtraSection>
-            <CategoryDetails></CategoryDetails>
+        <div className='my-10'>
+            <Slider></Slider>
+            <Catagories></Catagories>
+            <hr />
+            <AnotherHome></AnotherHome>
         </div>
     );
 };
