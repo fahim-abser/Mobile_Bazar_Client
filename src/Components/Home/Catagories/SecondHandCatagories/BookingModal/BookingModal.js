@@ -23,7 +23,7 @@ const BookingModal = ({ bikeBooking, setBikeBooking }) => {
             meetingLocation
         }
         console.log(bookings);
-        fetch('https://assaingment-twelve-server-nhn1998.vercel.app/bookings', {
+        fetch('https://assaingment-twelve-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

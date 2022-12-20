@@ -5,14 +5,14 @@ import toast from 'react-hot-toast';
 const AllSellers = () => {
     const { data: sellerRoles = [], isLoading, refetch } = useQuery({
         queryKey: ['users'],
-        queryFn: () => fetch('https://assaingment-twelve-server-nhn1998.vercel.app/users?role=Sellers')
+        queryFn: () => fetch('https://assaingment-twelve-server.vercel.app/users?role=Sellers')
             .then(res => res.json())
     })
     console.log(sellerRoles)
     const HandleDelete = id => {
         if (id) {
             alert('want to delete?')
-            fetch(`https://assaingment-twelve-server-nhn1998.vercel.app/allSellers/${id}`, {
+            fetch(`https://assaingment-twelve-server.vercel.app/allSellers/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

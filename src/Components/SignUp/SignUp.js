@@ -12,18 +12,18 @@ const SignUp = () => {
     const photoUrl = form.photoUrl.value;
     const email = form.email.value;
     const password = form.password.value;
-    const options= form.options.value;
+    const options = form.options.value;
     console.log(options)
 
     register(email, password)
       .then(result => {
         const user = result.user;
         console.log(user)
-        saveUser(name, email,options)
+        saveUser(name, email, options)
 
         HandleUpdateUserProfile(name, photoUrl)
           .then(() => {
-            
+
           })
           .catch(err => console.log(err))
 
@@ -37,9 +37,9 @@ const SignUp = () => {
     }
     updateUserProfile(profile)
   }
-  const saveUser = (name, email,role) => {
-    const user = { name, email,role }
-    fetch('https://assaingment-twelve-server-nhn1998.vercel.app/users', {
+  const saveUser = (name, email, role) => {
+    const user = { name, email, role }
+    fetch('https://assaingment-twelve-server.vercel.app/users', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
